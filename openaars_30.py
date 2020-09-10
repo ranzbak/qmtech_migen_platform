@@ -79,6 +79,23 @@ _aars_io = [
         Misc("SLEW=FAST"),
         IOStandard("LVCMOS33"),
     ),
+
+    # Floppy interface
+    ("floppy", 0,
+        Subsignal("mtron", Pins("R25")),
+        Subsignal("sel0", Pins("T3")),
+        Subsignal("dir", Pins("P5")),
+        Subsignal("step", Pins("P6")),
+        Subsignal("chng", Pins("M1")),
+        Subsignal("index", Pins("N1")),
+        Subsignal("rdy", Pins("P1")),
+        Subsignal("dkrd", Pins("R1")),
+        Subsignal("trk0", Pins("R2")),
+        Subsignal("dkwdb", Pins("T2")),
+        Subsignal("dkweb", Pins("U1")),
+        Subsignal("side", Pins("U2")),
+        IOStandard("LVCMOS33"),
+    )
 ]
 
 _io = coreboard._io + _aars_io

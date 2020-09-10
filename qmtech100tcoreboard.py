@@ -67,7 +67,7 @@ _io = [
         Subsignal("U225", Pins("K26"), IOStandard("LVCMOS33")),
         Subsignal("U226", Pins("K25"), IOStandard("LVCMOS33")),
         Subsignal("U227", Pins("K23"), IOStandard("LVCMOS33")),
-        Subsignal("U228", Pins("L22"), IOStandard("LVCMOS33")),
+        Subsignal("U228", Pins("K22"), IOStandard("LVCMOS33")),
         Subsignal("U229", Pins("M26"), IOStandard("LVCMOS33")),
         Subsignal("U230", Pins("N26"), IOStandard("LVCMOS33")),
         Subsignal("U231", Pins("L23"), IOStandard("LVCMOS33")),
