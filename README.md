@@ -14,8 +14,8 @@ Information about the QMtech boards can be found at the [company website](http:/
 
 |Board|type|test_script|description|
 |---|---|---|---|
-|QM_XC7A35T_DDR3|core board|XC7A35T-1FTG256C, 256Mb DDR3|
-|QM_XC7A100T_DDR3|core board|XC7A100T-2FGG676I, 256Mb DDR3|
+|QM_XC7A35T_DDR3|core board||XC7A35T-1FTG256C, 256Mb DDR3|
+|QM_XC7A100T_DDR3|core board||XC7A100T-2FGG676I, 256Mb DDR3|
 |QM_ARTIX7_XC7A35T DB|daughter board|qm_db_test.py|RTL8211EG ethernet, 16-VGA, 5 user leds, 5 user keys, 7-SEG LEDS, 2xPMOD, SDCARD|
 |[Open AARS](https://github.com/ranzbak/qmtech_minimig)|daughter board|aars_test.py|ADV7511 HDMI, ESP32 + SDCARD, 2x Joystick, PS/2 2x, Max9850 I2S audio output, 32Mb SDRAM|
 
