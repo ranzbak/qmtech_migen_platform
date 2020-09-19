@@ -2,6 +2,8 @@
 """
 Blink the LED of the QMTECH DDR3 CORE BOARD
 
+Copyright (C) 2020 by Paul Honig paul<at>etv.cx
+
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
@@ -24,13 +26,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
 import os
+import sys
 import argparse
 
 from migen import *
 
 # Custom platform file
-import qmtech100tcoreboard as platform_mod
-from openaars_30 import board_leds
+import platform.qmtech100tcoreboard as platform_mod
+from platform.openaars_30 import board_leds
+
 
 class MyLedBlink(Module):
     def __init__(self, platform):

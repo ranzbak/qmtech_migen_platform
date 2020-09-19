@@ -31,8 +31,8 @@ import argparse
 
 from migen import *
 
-import qmtech100tcoreboard as platform_mod
-from qmtech_db_fpga_xc7a35T_ddr3 import user_leds, d7seg
+import platform.qmtech100tcoreboard as platform_mod
+from platform.qmtech_db_fpga_xc7a35T_ddr3 import user_leds, d7seg
 
 
 class Decode7Seg(Module):

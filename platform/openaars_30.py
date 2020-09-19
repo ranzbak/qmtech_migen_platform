@@ -2,8 +2,8 @@
 Open Aars V3.0 daughter board platform file
 """
 
-from litex.build.generic_platform import *
-from litex.build.xilinx import XilinxPlatform, VivadoProgrammer
+from migen.build.generic_platform import *
+from migen.build.xilinx import XilinxPlatform, VivadoProgrammer
 
 # Use add_extension() to add the connectors to the platform
 # The platform this connector file is attended for is: qmtech100tcoreboard.py
