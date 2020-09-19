@@ -5,9 +5,9 @@
 # SPDX-License-Identifier: BSD-2-Clause
 # Altered 2020 Paul Honig
 
-from litex.build.generic_platform import *
-from litex.build.xilinx import XilinxPlatform, VivadoProgrammer
-#from litex.build.openocd import OpenOCD
+from migen.build.generic_platform import *
+from migen.build.xilinx import XilinxPlatform
+from migen.build.xilinx.programmer import VivadoProgrammer
 
 # IOs ----------------------------------------------------------------------------------------------
 
@@ -205,14 +205,11 @@ class Platform(XilinxPlatform):
 
 
         XilinxPlatform.__init__(self, fpga_part, _io, _connectors, toolchain="vivado")
-        #self.add_platform_command("set_property INTERNAL_VREF 0.750 [get_iobanks 34]")
-        #self.toolchain.bitstream_commands = \
-        #    ["set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]"]
+        self.toolchain.bitstream_commands = \
+            ["set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]"]
 
     def create_programmer(self):
-        #return OpenOCD("openocd_xc7_ft2232.cfg", "bscan_spi_xc7a100t.bit")
         return VivadoProgrammer()
 
     def do_finalize(self, fragment):
         XilinxPlatform.do_finalize(self, fragment)
-        # self.add_period_constraint(self.lookup_request("clk50", loose=True), 1e9/50e6)
